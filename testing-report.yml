@@ -7,14 +7,14 @@
     Проверка возможности удалить товар из корзины
   status: pass
 
-  - summary: |
+- summary: |
     Проверка работы фильтрации товаров
   status: pass
 
-  - summary: |
+- summary: |
     Проверка смены языка на сайте
   status: pass
 
-  - summary: |
+- summary: |
     Успешно оформить заказ в корзине
   status: fail
