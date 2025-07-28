@@ -157,3 +157,17 @@ bugreports:
       После после нажатия на кнопку "х" должно закрываться окно "Заказ успешно оформлен"
   actual-result: |
       После нажатия окно не закрывается
+
+test-cases:
+  - summary: |
+      Проверка страницы товара
+    status: pass
+
+bugreports: []
+
+test-cases:
+  - summary: |
+      Проверка каталога товаров
+    status: pass
+
+bugreports: []
