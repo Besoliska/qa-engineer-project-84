@@ -4,32 +4,89 @@ test-cases:
       Успешное добавление товара в корзину
     status: pass
 
-bugreports: []
-
 test-cases:
   - summary: |
       Успешное добавление нескольких одинаковых товаров в корзину
     status: pass
-
-bugreports: []
 
 test-cases:
   - summary: |
       Успешное добавление нескольких разных товаров в корзину
     status: pass
 
-bugreports: []
-
 test-cases:
   - summary: |
       Проверка возможности удалить товар из корзины
     status: pass
 
-bugreports: []
-
 test-cases:
   - summary: |
       Успешно оформить заказ в корзине
+    status: fail
+
+test-cases:
+  - summary: |
+      Проверка сайта на переключение языка на русский 
+    status: fail
+
+    test-cases:
+  - summary: |
+      Проверка сайта на переключение языка на английский
+    status: pass
+
+test-cases:
+  - summary: |
+      Проверка работы фильтрации товаров по ключевому слову
+    status: fail
+
+test-cases:
+  - summary: |
+      Проверка работы фильтрации товаров по бренду
+    status: pass
+
+test-cases:
+  - summary: |
+      Проверка работы фильтрации товаров по категории товаров
+    status: pass
+
+test-cases:
+  - summary: |
+      Проверка работы фильтрации товаров по цене
+    status: pass
+
+test-cases:
+  - summary: |
+      Проверка работы строки поиска при вводе цифр или знаков
+    status: pass
+
+test-cases:
+  - summary: |
+      Проверка работы хэштега
+    status: pass
+
+test-cases:
+  - summary: |
+      Проверка возможности открыть сайт магазина в другом браузере
+    status: pass
+
+test-cases:
+  - summary: |
+      Проверка возможности оплатить заказ
+    status: fail
+
+test-cases:
+  - summary: |
+      Проверка страницы товара
+    status: pass
+
+test-cases:
+  - summary: |
+      Проверка каталога товаров
+    status: fail
+
+test-cases:
+  - summary: |
+      Проверка возможности закрыть оформленный заказ
     status: fail
 
 bugreports: 
@@ -46,11 +103,6 @@ bugreports:
       Выводится окно "заказ успешно оформлен"
       Ошибка сервера "500 Internal Server Error"
 
-test-cases:
-  - summary: |
-      Проверка сайта на переключение языка на русский 
-    status: fail
-
 bugreports: 
   - summary: |
       После обновления страницы магазина выбранный русский язык сбрасывается
@@ -65,66 +117,19 @@ bugreports:
   actual-result: |
       После обновления выбранный русский язык не сохранился
 
-test-cases:
+bugreports: 
   - summary: |
-      Проверка сайта на переключение языка на английский
-    status: pass
-
-bugreports: []
-
-test-cases:
-  - summary: |
-      Проверка работы фильтрации товаров по ключевому слову
-    status: pass
-
-bugreports: []
-
-test-cases:
-  - summary: |
-      Проверка работы фильтрации товаров по бренду
-    status: pass
-
-bugreports: []
-
-test-cases:
-  - summary: |
-      Проверка работы фильтрации товаров по категории товаров
-    status: pass
-
-bugreports: []
-
-test-cases:
-  - summary: |
-      Проверка работы фильтрации товаров по цене
-    status: pass
-
-bugreports: []
-
-test-cases:
-  - summary: |
-      Проверка работы строки поиска при вводе цифр или знаков
-    status: pass
-
-bugreports: []
-
-test-cases:
-  - summary: |
-      Проверка работы хэштега
-    status: pass
-
-bugreports: []
-
-test-cases:
-  - summary: |
-      Проверка возможности открыть сайт магазина в другом браузере
-    status: pass
-
-bugreports: []
-
-test-cases:
-  - summary: |
-      Проверка возможности оплатить заказ
-    status: fail
+      При вводе ключевого слова в окно фильтрации сайт не выдает нужные товары по всему каталогу
+  environment: |
+      Opera GX 119.0.5497.86 Windows 10 64-bit
+  steps-to-reproduce: |
+      1. Открыть главную страницу магазина
+      2. Ввести ключевое слово в окно фильтрации
+      3. Попробовать разные слова
+  expected-result: |
+      Сайт должен выводить товары по всему каталогу
+  actual-result: |
+      Сайт не выводит нужные товары при фильтрации по ключевому слову
 
 bugreports: 
   - summary: |
@@ -139,10 +144,18 @@ bugreports:
   actual-result: |
       Сайт не выводит страницу оплаты 
 
-test-cases:
+bugreports: 
   - summary: |
-      Проверка возможности закрыть оформленный заказ
-    status: fail
+      На странице каталога товаров не отображается рейтинг
+  environment: |
+      Opera GX 119.0.5497.86 Windows 10 64-bit
+  steps-to-reproduce: |
+      1. Открыть главну страницу
+      2. Проверить каталог на наличие рейтинга у товаров
+  expected-result: |
+      В каталоге товаров должен отображаться рейтинг
+  actual-result: |
+      Сайт не отображает рейтин в каталоге товаров
 
 bugreports: 
   - summary: |
@@ -157,17 +170,4 @@ bugreports:
       После после нажатия на кнопку "х" должно закрываться окно "Заказ успешно оформлен"
   actual-result: |
       После нажатия окно не закрывается
-
-test-cases:
-  - summary: |
-      Проверка страницы товара
-    status: pass
-
-bugreports: []
-
-test-cases:
-  - summary: |
-      Проверка каталога товаров
-    status: pass
-
-bugreports: []
+      
