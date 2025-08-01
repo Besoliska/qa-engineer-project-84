@@ -75,77 +75,77 @@ test-cases:
 bugreports: 
   - summary: |
       Ошибка сервера при оформлении заказа
-   environment: |
+    environment: |
       Opera GX 119.0.5497.86 Windows 10 64-bit
-   steps-to-reproduce: |
+    steps-to-reproduce: |
       1. Открыть на сайте корзину
       2. Нажать кнопку "Оформить заказ"
-   expected-result: |
+    expected-result: |
       Заказ должен быть успешно оформлен без серверной ошибки
-   actual-result: |
+    actual-result: |
       Выводится окно "заказ успешно оформлен"
       Ошибка сервера "500 Internal Server Error"
 
   - summary: |
       После обновления страницы магазина выбранный русский язык сбрасывается
-   environment: |
+    environment: |
       Opera GX 119.0.5497.86 Windows 10 64-bit
-   steps-to-reproduce: |
+    steps-to-reproduce: |
       1. Открыть главную страницу магазина
       2. Нажать кнопку "язык" и выбрать русский
       3. Обновить страницу
-   expected-result: |
+    expected-result: |
       После обновления страницы должен сохраниться выбранный русский язык
-   actual-result: |
+    actual-result: |
       После обновления выбранный русский язык не сохранился
 
   - summary: |
       При вводе ключевого слова в окно фильтрации сайт не выдает нужные товары по всему каталогу
-   environment: |
+    environment: |
       Opera GX 119.0.5497.86 Windows 10 64-bit
-   steps-to-reproduce: |
+    steps-to-reproduce: |
       1. Открыть главную страницу магазина
       2. Ввести ключевое слово в окно фильтрации
       3. Попробовать разные слова
-   expected-result: |
+    expected-result: |
       Сайт должен выводить товары по всему каталогу
-   actual-result: |
+    actual-result: |
       Сайт не выводит нужные товары при фильтрации по ключевому слову
 
   - summary: |
       Проверка возможности оплатить заказ
-   environment: |
+    environment: |
       Opera GX 119.0.5497.86 Windows 10 64-bit
-   steps-to-reproduce: |
+    steps-to-reproduce: |
       1. Отрыть корзину с добавлеными товарами
       2. Нажать "оформить заказ"
-   expected-result: |
+    expected-result: |
       После оформления заказа сайт должен выводить страницу для оплаты
-   actual-result: |
+    actual-result: |
       Сайт не выводит страницу оплаты 
 
   - summary: |
       На странице каталога товаров не отображается рейтинг
-   environment: |
+    environment: |
       Opera GX 119.0.5497.86 Windows 10 64-bit
-   steps-to-reproduce: |
+    steps-to-reproduce: |
       1. Открыть главну страницу
       2. Проверить каталог на наличие рейтинга у товаров
-   expected-result: |
+    expected-result: |
       В каталоге товаров должен отображаться рейтинг
-   actual-result: |
+    actual-result: |
       Сайт не отображает рейтин в каталоге товаров
 
   - summary: |
       Проверка возможности закрыть оформленный заказ
-   environment: |
+    environment: |
       Opera GX 119.0.5497.86 Windows 10 64-bit
-   steps-to-reproduce: |
+    steps-to-reproduce: |
       1. Открыть корзину с добавлеными товарами
       2. Нажать кнопку "Оформить заказ"
       3. Закрыть окно заказа через кнопку "x"
-   expected-result: |
+    expected-result: |
       После после нажатия на кнопку "х" должно закрываться окно "Заказ успешно оформлен"
-   actual-result: |
+    actual-result: |
       После нажатия окно не закрывается
   
