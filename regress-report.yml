@@ -29,7 +29,7 @@ test-cases:
       Проверка сайта на переключение языка на русский 
     status: fail
 
-    test-cases:
+test-cases:
   - summary: |
       Проверка сайта на переключение языка на английский
     status: pass
