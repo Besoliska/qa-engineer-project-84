@@ -69,4 +69,4 @@
 
 - summary: |
     Проверка каталога товаров
-  status: pass
+  status: fail
